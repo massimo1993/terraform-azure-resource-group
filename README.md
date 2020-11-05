@@ -17,7 +17,7 @@ group.
 # Usage
 
 You can find an example on how to incorporate this module in your project under
-[examples](examples).
+[examples](https://tinyurl.com/y6d58zwm).
 
 The examples consist of the following files:
 
@@ -29,7 +29,7 @@ The examples consist of the following files:
 # License
 
 This repository is licensed under the **GNU General Public License v3.0** - see
-the [LICENSE](LICENSE) file for details.
+the [LICENSE](https://tinyurl.com/y3wo2t3b) file for details.
 
 # Acknowledgments
 
