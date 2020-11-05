@@ -2,7 +2,7 @@
 
 Terraform module for deploying Azure Resource Group.
 
-![Resource Group](img/resource-group.png)
+![Resource Group](https://tinyurl.com/y2t5b4rq)
 
 A **resource group** is a container that holds related resources for an Azure
 solution. The resource group can include all the resources for the solution, or
@@ -12,7 +12,7 @@ your organization. Generally, add resources that share the same lifecycle to the
 same resource group so you can easily deploy, update, and delete them as a
 group.
 
-![Resource Group Architecture](img/architecture.png)
+![Resource Group Architecture](https://tinyurl.com/y4uzve6y)
 
 # Usage
 
