@@ -3,6 +3,7 @@ locals {
 
   name   = replace(module.naming.resource_group.name, "-", "")
   length = module.naming.resource_group.max_length - 4
+
   prefix = substr(local.name, 0, local.length)
 }
 
