@@ -1,10 +1,10 @@
 resource azurerm_resource_group resource_group {
-  name = format("%s%s%03d",
+  name = format("%s-%s-%03d",
     substr(
-      replace(module.naming.resource_group.name, "-", ""),
+      module.naming.resource_group.name, 0,
       module.naming.resource_group.max_length - 4
     ),
-    substr(var.info.environment, 0, 1),
+    local.environment,
     var.info.sequence
   )
 
