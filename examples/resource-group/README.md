@@ -4,17 +4,17 @@ Example demonstrating the deployment of an Azure Resource Group.
 The deployment will use the **azurerm backend** to store the state
 of the deployment.
 
-## azurerm
+### azurerm
 
 Stores the state as a blob with the given key within the blob
 container within the blob storage account. This backend also
 supports state locking and consistency checking via native
 capabilities of Azure Blob Storage.
 
-Refer to [azurerm]('https://tinyurl.com/fk75jj7b') for more
+Refer to [azurerm](https://tinyurl.com/fk75jj7b) for more
 information on configuring the azurerm backend.
 
-## Variable Definitions (.tfvars) Files
+### Variable Definitions (.tfvars) Files
 
 When deploying resources using Terraform, you have the option
 of using **tfvars** files. In this example there is a folder
