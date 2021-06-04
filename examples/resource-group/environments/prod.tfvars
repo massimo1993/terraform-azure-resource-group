@@ -1,12 +1,11 @@
 info = {
-  project     = "Gemini"
+  project     = "Codename 47"
   environment = "Prod"
   sequence    = "001"
 }
 
 tags = {
-  source  = "Terraform"
-  owner   = "Massimo Cannavo"
+  owner = "Diana"
 }
 
 region = "South Central US"

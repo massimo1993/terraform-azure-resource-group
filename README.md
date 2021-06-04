@@ -17,11 +17,11 @@ group.
 # Usage
 
 You can find an example on how to incorporate this module in your project under
-[examples](https://tinyurl.com/y6d58zwm).
+[examples](https://tinyurl.com/mntj3434).
 
 The examples consist of the following files:
 
-- `backend.tf:` configuration for using remote azurerm backend.
+- `backend.tf:` configuration for using azurerm backend.
 - `environments:` tfvars file for dev, qa and prod environment.
 - `main.tf:` the main file with the resource group module.
 - `variables.tf:` definition of expected input variables.

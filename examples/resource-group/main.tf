@@ -15,10 +15,10 @@ provider azurerm {
 
 module resource_group {
   source  = "massimo1993/resource-group/azure"
-  version = "0.0.3"
+  version = "1.0.0"
 
-  info = var.info
-  tags = var.tags
-
+  info   = var.info
   region = var.region
+
+  tags = var.tags
 }

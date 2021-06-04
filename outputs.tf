@@ -1,5 +1,5 @@
 output name {
-  description = "Generated name for the resource group."
+  description = "Generated name of the resource group."
   value       = azurerm_resource_group.resource_group.name
 }
 
