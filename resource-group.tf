@@ -1,18 +1,14 @@
 locals {
   prefix = "rg-${local.project}"
 
-  offset     = 0
-  max_length = 90 - 6
+  offset = 0
+  length = 3
+
+  env = substr(local.environment, local.offset, local.length)
 }
 
 resource azurerm_resource_group resource_group {
-  name = replace(
-    format("%s-%s-%03d",
-      substr(local.prefix, local.offset, local.max_length),
-      substr(local.environment, local.offset, 3),
-      var.info.sequence
-    ), " ", ""
-  )
+  name = format("%s-%s-%03d", local.prefix, local.env, var.info.sequence)
 
   location = var.region
   tags     = local.tags

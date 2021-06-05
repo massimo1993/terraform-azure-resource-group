@@ -13,15 +13,65 @@ variable info {
   type = object({
     project     = string
     environment = string
-    sequence    = string
+    sequence    = number
   })
 
   description = "Info object used to construct naming convention for the resource group."
+
+  validation {
+    condition     = length(var.info.project) <= 79
+    error_message = "Maximum of 79 characters allowed."
+  }
+
+  validation {
+    condition = (
+      can(regex("^[[:alnum:]]+$", var.info.project)) &&
+      can(regex("^[[:alnum:]]+$", var.info.environment))
+    )
+
+    error_message = "Invalid character, alphanumeric values are supported."
+  }
+
+  validation {
+    condition     = var.info.sequence >= 0 && var.info.sequence <= 999
+    error_message = "Sequence number must not exceed 999 and must be positive."
+  }
 }
 
 variable tags {
   type        = map(string)
   description = "Tags object used to tag the resource group."
+
+  validation {
+    condition = length([
+      for key, value in var.tags : true
+        if length(key) >= 0 && length(key) <= 512
+
+    ]) == length(var.tags)
+
+    error_message = "Tag name must not exceed 512 characters."
+  }
+
+  validation {
+    condition = length([
+      for key, value in var.tags : true
+        if length(value) >= 0 && length(value) <= 256
+
+    ]) == length(var.tags)
+
+    error_message = "Tag value must not exceed 256 characters."
+  }
+
+  validation {
+    condition = length([
+      for key, value in var.tags : true
+        if can(regex("^[[:alnum:]]+$", key)) &&
+           can(regex("^[[:alnum:]]+$", value))
+
+    ]) == length(var.tags)
+
+    error_message = "Invalid character, alphanumeric values are supported."
+  }
 }
 
 variable region {

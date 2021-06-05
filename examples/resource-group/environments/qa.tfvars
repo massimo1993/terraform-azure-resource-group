@@ -1,7 +1,7 @@
 info = {
-  project     = "Codename 47"
+  project     = "Codename47"
   environment = "QA"
-  sequence    = "001"
+  sequence    = 001
 }
 
 tags = {
