@@ -2,7 +2,7 @@ variable info {
   type = object({
     project     = string
     environment = string
-    sequence    = string
+    sequence    = number
   })
 }
 

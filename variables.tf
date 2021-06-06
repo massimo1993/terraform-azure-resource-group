@@ -33,8 +33,8 @@ variable info {
   }
 
   validation {
-    condition     = var.info.sequence >= 0 && var.info.sequence <= 999
-    error_message = "Sequence number must not exceed 999 and must be positive."
+    condition     = var.info.sequence > 0 && var.info.sequence <= 999
+    error_message = "Sequence number must be between 1 and 999."
   }
 }
 
@@ -45,7 +45,7 @@ variable tags {
   validation {
     condition = length([
       for key, value in var.tags : true
-        if length(key) >= 0 && length(key) <= 512
+        if length(key) <= 512
 
     ]) == length(var.tags)
 
@@ -55,7 +55,7 @@ variable tags {
   validation {
     condition = length([
       for key, value in var.tags : true
-        if length(value) >= 0 && length(value) <= 256
+        if length(value) <= 256
 
     ]) == length(var.tags)
 
