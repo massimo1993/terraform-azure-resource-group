@@ -14,8 +14,9 @@ provider azurerm {
 }
 
 module resource_group {
-  source  = "massimo1993/resource-group/azure"
-  version = "1.0.0"
+  # When using the module in your own project, you will need to use
+  # massimo1993/resource-group/azure as the source.
+  source = "../../"
 
   info   = var.info
   region = var.region

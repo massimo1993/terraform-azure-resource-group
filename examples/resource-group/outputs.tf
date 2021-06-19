@@ -1,14 +1,14 @@
 output name {
   description = "Generated name of the resource group."
-  value       = azurerm_resource_group.resource_group.name
+  value       = module.resource_group.name
 }
 
 output region {
   description = "Region where the resource group will be created."
-  value       = azurerm_resource_group.resource_group.location
+  value       = module.resource_group.region
 }
 
 output id {
   description = "The ID of the resource group."
-  value       = azurerm_resource_group.resource_group.id
+  value       = module.resource_group.id
 }
