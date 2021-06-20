@@ -9,7 +9,7 @@ solution. The resource group can include all the resources for the solution, or
 only those resources that you want to manage as a group. You decide how you want
 to allocate resources to resource groups based on what makes the most sense for
 your organization. Generally, add resources that share the same lifecycle to the
-same resource group so you can easily deploy, update, and delete them as a
+same resource group, so you can easily deploy, update, and delete them as a
 group.
 
 ![Resource Group Architecture](https://tinyurl.com/y4uzve6y)

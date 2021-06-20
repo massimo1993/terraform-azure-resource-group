@@ -6,3 +6,6 @@ terraform.tfvars
 *.tfstate
 *.tfstate.backup
 *.tfstate.lock.info
+
+# IntelliJ IDEA
+.idea
